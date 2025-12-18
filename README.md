@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+# 🏷️ Estoque Vendas Desktop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema completo para gerenciamento de produtos, vendas e estoque, desenvolvido com **FastAPI** no backend e **React + TypeScript** no frontend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔹 Funcionalidades
 
-## Expanding the ESLint configuration
+- Dashboard com visão geral do estoque e vendas
+- Cadastro, edição e exclusão de produtos
+- Exibição de produtos em tabela editável
+- Reset de valores do carrinho
+- Interface amigável e responsiva
+- API documentada via Swagger
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📁 Estrutura do Projeto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+estoque-vendas-desktop/
+│
+├── backend/ # FastAPI
+│ ├── app/ # Código da API
+│ ├── requirements.txt
+│ └── venv/
+│
+├── frontend/ # React + TypeScript
+│ ├── src/
+│ ├── public/
+│ ├── package.json
+│ └── ...
+│
+├── .gitignore
+└── README.md
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+---
+
+## ⚡ Tecnologias
+
+- **Backend:** Python, FastAPI, Uvicorn  
+- **Frontend:** React, TypeScript, CSS  
+- **Banco de Dados:** Pode ser SQLite ou outro à sua escolha  
+- **Controle de versão:** Git / GitHub  
+
+---
+
+## 🚀 Como rodar o projeto
+
+### 1️⃣ Backend (FastAPI)
+```bash
+# Entrar na pasta do backend
+cd backend
+
+# Criar e ativar virtualenv
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux / Mac
+source venv/bin/activate
+
+# Instalar dependências
+pip install -r requirements.txt
+
+# Rodar a API
+uvicorn app.main:app --reload
+
+Acesse a API no navegador: http://127.0.0.1:8000
+
+Swagger (documentação da API): http://127.0.0.1:8000/docs
+
+# Entrar na pasta do frontend
+cd frontend
+
+# Instalar dependências
+npm install
+
+# Rodar o frontend
+npm start
+Acesse a aplicação no navegador: http://localhost:3000
