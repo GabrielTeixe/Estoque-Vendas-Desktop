@@ -1,0 +1,15 @@
+.btn-mostrar {
+  background: transparent; /* fundo inicial */
+  color: #000000;          /* cor do texto */
+  border: 2px solid #4da3ff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-mostrar:hover {
+  background: #4da3ff;
+  color: #fff;
+}
